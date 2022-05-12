@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './style.css';
 
 function App1(props) {
   return (
-    <div>
+    <div className="comp1">
       <h1>comp.1</h1>
       <p>{props.name}</p>
     </div>
@@ -24,10 +25,15 @@ function App3(props) {
   return (
     <div>
       <h1>comp.3</h1>
-      <p>{props.lastname} {props.middlename} {props.name}</p>
+      <p>
+        {props.lastname} {props.middlename} {props.name}
+      </p>
       <App2 middlename="J." />
     </div>
   );
 }
 
-ReactDOM.render(<App3 lastname="Carrasco" middlename="J." name="Sergio" />, document.getElementById('root'));
+ReactDOM.render(
+  <App3 lastname="Carrasco" middlename="J." name="Sergio" />,
+  document.getElementById('root')
+);
